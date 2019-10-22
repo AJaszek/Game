@@ -7,11 +7,21 @@ public class Player {
     private Random dice = new Random();
     private String name;
     
+    public Player(){
+        this.setName("Anonim");
+    }
+    public Player(String a){
+        this.setName(a);
+    }
+    
     public void setName(String name){
         
-        if(name == null) System.err.println("Imie nie moze byc null");
-        else this.name=name;
-        
+        if(name != null && !name.isEmpty()){
+            this.name=name;
+        }
+        else{
+             System.err.println("Imie nieprawidlowe");
+        }
     }
     
     public String getName(){

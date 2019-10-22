@@ -8,8 +8,8 @@ public class Game {
         
         int pc,guess;
         
-        Player player = new Player();
-        player.setName(null);
+        Player player = new Player("Arek");
+        //player.setName(null);
         
         System.out.println(player.getName() + " zgaduje wylosowana liczbe");
         do{

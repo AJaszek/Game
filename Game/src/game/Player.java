@@ -3,8 +3,8 @@ package game;
 
 import java.util.Random;
 
-public class Player {
-    private Random dice = new Random();
+public abstract class Player {
+
     private String name;
     
     public Player(){
@@ -28,9 +28,6 @@ public class Player {
         return this.name;
     }
     
-    public int guess(){
-
-       return dice.nextInt(6)+1; 
-    }
+    public abstract int guess();
 
 }

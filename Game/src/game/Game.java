@@ -7,8 +7,11 @@ public class Game {
       Random dice = new Random();
         
         int pc,guess;
+        Player player;
         
-        Player player = new Player("Arek");
+        player = new PlayerHuman();
+        
+        //Player player = new Player("Arek");
         //player.setName(null);
         
         System.out.println(player.getName() + " zgaduje wylosowana liczbe");

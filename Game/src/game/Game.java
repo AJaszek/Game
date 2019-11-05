@@ -8,7 +8,17 @@ public class Game {
         
         int pc,guess;
         
-        Player player = new Player("Arek");
+        Player player;
+        player = new PlayerHuman();
+        
+        try{
+            player.setName("Are4 k");
+        } catch(IllegalArgumentException e){
+            System.err.print("Blad! "+ e.getMessage());
+        }
+        
+        
+        //Player player = new Player("Arek");
         //player.setName(null);
         
         System.out.println(player.getName() + " zgaduje wylosowana liczbe");

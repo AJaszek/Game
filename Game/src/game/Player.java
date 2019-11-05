@@ -3,8 +3,8 @@ package game;
 
 import java.util.Random;
 
-public class Player {
-    private Random dice = new Random();
+public abstract class Player {
+
     private String name;
     
     public Player(){
@@ -16,21 +16,20 @@ public class Player {
     
     public void setName(String name){
         
-        if(name != null && !name.isEmpty()){
+        if(name != null && name.matches("^[a-zA-Z0-9~.]{3,}$")){
             this.name=name;
         }
         else{
-             System.err.println("Imie nieprawidlowe");
+            throw new IllegalArgumentException("Imie nieprawidlowe");
+            //System.err.println("Imie nieprawidlowe");
         }
+        
     }
     
     public String getName(){
         return this.name;
     }
     
-    public int guess(){
-
-       return dice.nextInt(6)+1; 
-    }
+    public abstract int guess();
 
 }

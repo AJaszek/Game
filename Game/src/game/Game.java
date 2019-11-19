@@ -1,25 +1,49 @@
 
 package game;
-import java.util.Random;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Game {
 
     public static void main(String[] args) {
-      Random dice = new Random();
+/*
+        Game_g game= new Game_g();
+        Player player;
+        player = new PlayerComp();
         
-        int pc,guess;
+        player.setName("Arek");
+       
+        game.addPlayer(player);
         
-        Player player = new Player("Arek");
-        //player.setName(null);
+        game.play();
+ */
+
+        List<String> list = new ArrayList(); //mozna okreslic typ
         
-        System.out.println(player.getName() + " zgaduje wylosowana liczbe");
-        do{
+        list.add("raz");
+        list.add("dwa");
+        list.add("trzy");
         
-            pc = dice.nextInt(6)+1;
-            guess = player.guess();
-            System.out.println(pc + " " + guess);
+        System.out.println(list.toString());
         
-        }while(pc!=guess);
-        System.out.println("Gratulacje!");
+        for(int i=0;i<list.size();i++){
+            System.out.println(list.get(i));
+        }
+        
+        for (Object s : list){
+            System.out.println(s);
+        }
+        
+        Iterator<String> it2 = list.iterator();
+        while(it2.hasNext()){
+            System.out.println(it2.next());
+        }
+        
+        for(Iterator<String> it = list.iterator(); it.hasNext();){
+            System.out.println(it2.next());   
+        }
         
     }
     

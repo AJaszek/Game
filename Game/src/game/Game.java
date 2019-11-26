@@ -1,30 +1,34 @@
 
 package game;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.Iterator;
+//import java.util.List;
 
 public class Game {
 
     public static void main(String[] args) {
-/*
+
         Game_g game= new Game_g();
-        Player player;
-        player = new PlayerComp();
         
+        Player player = new PlayerComp();
         player.setName("Arek");
        
         game.addPlayer(player);
+        game.addPlayer(new PlayerComp("Komputer"));       
+        game.addPlayer(new PlayerComp("Komputer")); 
+        game.addPlayer(new PlayerComp("Komputer")); 
+        game.addPlayer(new PlayerComp("Komputer")); 
         
         game.play();
- */
 
-        List<String> list = new ArrayList(); //mozna okreslic typ
+       // List<Player> list = new ArrayList(); //mozna okreslic typ
         
-        list.add("raz");
-        list.add("dwa");
-        list.add("trzy");
+        //list.add("raz");
+        //list.add("dwa");
+        /*list.add(player);
+
+        
         
         System.out.println(list.toString());
         
@@ -36,14 +40,14 @@ public class Game {
             System.out.println(s);
         }
         
-        Iterator<String> it2 = list.iterator();
+        Iterator<Player> it2 = list.iterator();
         while(it2.hasNext()){
             System.out.println(it2.next());
         }
         
-        for(Iterator<String> it = list.iterator(); it.hasNext();){
+        for(Iterator<Player> it = list.iterator(); it.hasNext();){
             System.out.println(it2.next());   
-        }
+        }*/
         
     }
     

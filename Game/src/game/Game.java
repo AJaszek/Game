@@ -20,6 +20,8 @@ public class Game {
         game.addPlayer(new PlayerComp("Komputer")); 
         game.addPlayer(new PlayerComp("Komputer")); 
         
+        game.removePlayer("Komputer");
+        
         game.play();
 
        // List<Player> list = new ArrayList(); //mozna okreslic typ

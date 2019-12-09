@@ -33,7 +33,16 @@ public class Game_g {
             this.addPlayer(player);
         }
     }
-    
+    public void removePlayer(String name){
+        int i=0;
+        for(Player p: players){
+            if(p.getName().equals(name)){
+                players.remove(i);
+                break;
+            }
+            i++;
+        }
+    }
     public void play(){
             
         int pc,guess;
